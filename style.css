@@ -1,0 +1,165 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: url("https://cdn.glitch.global/00ffaf65-2464-4b67-80f5-c035446fb0f9/windows-xp.jpg?v=1736786493556");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.animal-buttons {
+  display: flex; 
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding: 0 15px;
+  gap: 15px;
+  width: 100%;
+  
+  z-index: 2;
+  
+} 
+  
+#cow-button,
+#pig-button,
+#horse-button,
+#chicken-button,
+#cat-button,
+#restart-button {
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  
+  font-family: "ouma-latin-variable", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: 20px;
+  
+  background-color: transparent;
+  border: 3px solid blue;
+  border-radius: 8px;
+  
+  color: blue;
+  padding: 6px 10px 4px 10px ;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+ } 
+
+#cow-button:hover,
+#pig-button:hover,
+#horse-button:hover,
+#chicken-button:hover,
+#cat-button:hover,
+#dog-button:hover,
+#restart-button:hover {
+  background-color: #F5F9FA;
+  color: blue;              
+  border-color: blue;       
+}
+
+
+
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+  z-index: 1;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;
+  position: relative;
+}
+
+.subtitle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 275px;
+  height: 75px;
+  background-color: transparent;
+  border: 6px solid blue;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+h1 {
+  color: blue;
+  font-family: "ouma-latin-variable", sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 250px;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  font-family: "ouma-latin-variable", sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 110px;
+  text-align: center;
+ 
+}
+
+footer {
+  color: blue;
+  font-family: "ouma-latin-variable", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+
+#question-mark {
+  margin-left: 15px;
+  padding: 0 10px;
+  transform: translateY(30px);
+  cursor: pointer;
+}
+
+#arrow-symbol {
+  margin-right: 15px;
+  padding: 0 10px;
+  transform: translateY(30px);
+  cursor: pointer;
+}
