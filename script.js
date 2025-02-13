@@ -7,12 +7,28 @@ var restartBtn = document.querySelector("#restart-button");
 
 var allImages = [];
 
+function getRandomPosition(maxValue) {
+  return Math.random() * (maxValue - 100);
+}
+
+var questionMark = document.getElementById("question-mark");
+var popup = document.getElementById("popup-small");
+
+// When the question mark is clicked, toggle the popup visibility
+questionMark.onclick = function () {
+  if (popup.style.display === "none" || popup.style.display === "") {
+    popup.style.display = "block"; // Show the popup
+  } else {
+    popup.style.display = "none"; // Hide the popup
+  }
+};
+
 cowBtn.onclick = function () {
   document.getElementById("cow-sound").play();
   var cowImg = document.createElement("img");
   cowImg.style.position = "absolute";
-  cowImg.style.left = Math.random() * 100 + "%";
-  cowImg.style.top = Math.random() * 100 + "%";
+  cowImg.style.left = getRandomPosition(window.innerWidth) + "px";
+  cowImg.style.top = getRandomPosition(window.innerHeight) + "px";
   cowImg.style.width = 100 + Math.random() * 100 + "px";
 
   var randomNumber = Math.random();
@@ -32,8 +48,8 @@ pigBtn.onclick = function () {
   document.getElementById("pig-sound").play();
   var pigImg = document.createElement("img");
   pigImg.style.position = "absolute";
-  pigImg.style.left = Math.random() * 100 + "%";
-  pigImg.style.top = Math.random() * 100 + "%";
+  pigImg.style.left = getRandomPosition(window.innerWidth) + "px";
+  pigImg.style.top = getRandomPosition(window.innerHeight) + "px";
   pigImg.style.width = 100 + Math.random() * 100 + "px";
 
   var randomNumber = Math.random();
@@ -53,8 +69,8 @@ horseBtn.onclick = function () {
   document.getElementById("horse-sound").play();
   var horseImg = document.createElement("img");
   horseImg.style.position = "absolute";
-  horseImg.style.left = Math.random() * 100 + "%";
-  horseImg.style.top = Math.random() * 100 + "%";
+  horseImg.style.left = getRandomPosition(window.innerWidth) + "px";
+  horseImg.style.top = getRandomPosition(window.innerHeight) + "px";
   horseImg.style.width = 100 + Math.random() * 100 + "px";
 
   var randomNumber = Math.random();
@@ -74,8 +90,8 @@ chickenBtn.onclick = function () {
   document.getElementById("chicken-sound").play();
   var chickenImg = document.createElement("img");
   chickenImg.style.position = "absolute";
-  chickenImg.style.left = Math.random() * 100 + "%";
-  chickenImg.style.top = Math.random() * 100 + "%";
+  chickenImg.style.left = getRandomPosition(window.innerWidth) + "px";
+  chickenImg.style.top = getRandomPosition(window.innerHeight) + "px";
   chickenImg.style.width = 100 + Math.random() * 100 + "px";
 
   var randomNumber = Math.random();
@@ -98,8 +114,8 @@ catBtn.onclick = function () {
   document.getElementById("cat-sound").play();
   var catImg = document.createElement("img");
   catImg.style.position = "absolute";
-  catImg.style.left = Math.random() * 100 + "%";
-  catImg.style.top = Math.random() * 100 + "%";
+  catImg.style.left = getRandomPosition(window.innerWidth) + "px";
+  catImg.style.top = getRandomPosition(window.innerHeight) + "px";
   catImg.style.width = 100 + Math.random() * 100 + "px";
 
   var randomNumber = Math.random();
