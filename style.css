@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: ;
+  overflow-y: hidden;
 }
 
 body {
@@ -48,7 +48,7 @@ main {
   
   font-family: "ouma-latin-variable", sans-serif;
   font-variation-settings: "wght" 700;
-  font-size: 20px;
+  font-size: 25px;
   
   background-color: transparent;
   border: 3px solid blue;
@@ -88,14 +88,14 @@ main {
 .title {
   display: flex;
   justify-content: center;
-  margin-top: -30px;
+  margin-top: 5vw;
   z-index: 1;
 }
 
 .subtitle {
   display: flex;
   justify-content: center;
-  margin-top: -50px;
+  margin-top: -10vw;
   position: relative;
 }
 
@@ -104,10 +104,10 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 275px;
-  height: 75px;
+  width: 20vw;
+  height: 5vw; 
   background-color: transparent;
-  border: 6px solid blue;
+  border: clamp(6px, 1vw, 6px) solid blue;
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
@@ -117,7 +117,7 @@ h1 {
   color: blue;
   font-family: "ouma-latin-variable", sans-serif;
   font-variation-settings: "wght" 500;
-  font-size: 250px;
+  font-size: 17vw;
   text-align: center;
 }
 
@@ -125,7 +125,7 @@ h2 {
   color: blue;
   font-family: "ouma-latin-variable", sans-serif;
   font-variation-settings: "wght" 500;
-  font-size: 110px;
+  font-size: 10vw;
   text-align: center;
  
 }
@@ -147,6 +147,24 @@ footer {
   z-index: 3;
 }
 
+
+.popup {
+  display: none; /* Hidden by default */
+  position: absolute;
+  bottom: 30px; /* Position it above the footer */
+  left: calc(100% + 10px); /* Position the popup right next to the question mark */
+  background-color: #ffffff; /* White background */
+  border: 3px solid blue; /* Blue border like the buttons */
+  border-radius: 8px; /* Rounded corners like the buttons */
+  padding: 10px;
+  width: 200px; /* Width of the popup */
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 10; /* Ensure it's on top of other elements */
+  font-family: "ouma-latin-variable", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: 14px; /* Make the font smaller */
+}
 
 #question-mark {
   margin-left: 15px;
